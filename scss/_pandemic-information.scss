@@ -1,0 +1,161 @@
+@import 'mixins';
+
+.pandemic-information {
+  width: 700px;
+  margin-left: 10%;
+  @include alignItems;
+  flex-direction: column;
+
+  .head-title {
+    width: 100%;
+    @include textCenter;
+    background-color: #f5f5f5;
+    color: #777;
+    font-size: 19px;
+    text-transform: uppercase;
+    line-height: 40px;
+    @include roboto_font;
+  }
+  .last-update {
+    @include textCenter;
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px;
+  }
+  .pandemic-details {
+    width: 100%;
+    @include textCenter;
+    margin-top: 20px;
+    font-size: 14px;
+    a {
+      color: #699a21;
+    }
+    .dash {
+      margin-left: 5px;
+    }
+    .cases {
+      margin-top: $marginTop;
+      .confirmed {
+        @include flexColumn;
+        .confirmed-title {
+          @include textStyles;
+        }
+        .cofirmed-cases {
+          @include counterStyles;
+          color: #aaa;
+        }
+      }
+      .recovered {
+        margin-top: $marginTop;
+        @include flexColumn;
+        .recovered-title {
+          @include textStyles;
+        }
+        .recovered-cases {
+          @include counterStyles;
+          color: $light-green;
+        }
+      }
+      .critical {
+        margin-top: $marginTop;
+        @include flexColumn;
+        .critical-title {
+          @include textStyles;
+        }
+        .critical-cases {
+          @include counterStyles;
+          color: $dark-red;
+        }
+      }
+      .deaths {
+        margin-top: $marginTop;
+        @include flexColumn;
+        .death-title {
+          @include textStyles;
+        }
+        .death-cases {
+          @include counterStyles;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+  .details-box {
+    @include spaceBetween;
+    margin-top: $marginTop;
+    .case-status {
+      padding-bottom: 10px;
+      flex-grow: 1;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      .case-heading {
+        text-transform: uppercase;
+        background-color: #f5f5f5;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd;
+      }
+      .case-info {
+        padding: 15px;
+        @include textCenter;
+        height: 200px;
+        .condition {
+          display: flex;
+          flex-direction: column;
+          height: 30%;
+          .condition-number {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+          .status {
+            font-size: 13.5px;
+          }
+        }
+      }
+      .condition-stats {
+        @include spaceBetween;
+        flex-direction: column;
+        height: 40%;
+        margin-top: 15px;
+        .number {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .purple {
+          color: $purple;
+        }
+        .dark-red {
+          color: $dark-red;
+        }
+        .recover {
+          color: $light-green;
+        }
+        .stats {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 778px) {
+  .pandemic-information {
+    margin-left: 0;
+    justify-content: center;
+    width: auto;
+  }
+  .details-box {
+    flex-direction: column;
+    align-items: center;
+
+    .case-status {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  }
+}

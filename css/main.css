@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  color: #363945; }
+
+ol,
+ul {
+  list-style: none; }
+
+.header {
+  width: 80%;
+  margin: auto; }
+  .header .navigation {
+    padding: 10px; }
+    .header .navigation .header-logo {
+      width: 60px;
+      height: 60px; }
+    .header .navigation .navigation-list {
+      display: flex;
+      align-items: center; }
+      .header .navigation .navigation-list li {
+        margin-right: 30px; }
+      .header .navigation .navigation-list .coronavirus-text {
+        color: #ff9900;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer; }
+      .header .navigation .navigation-list .population-text {
+        color: #b0afa2;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer; }
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  margin-bottom: 20px; }
+
+@media (max-width: 569px) {
+  .coronavirus-text,
+  .population-text {
+    display: none; } }
+
+.pandemic-information {
+  width: 700px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .pandemic-information .head-title {
+    width: 100%;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #777;
+    font-size: 19px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer; }
+  .pandemic-information .last-update {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px; }
+  .pandemic-information .pandemic-details {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px; }
+    .pandemic-information .pandemic-details a {
+      color: #699a21; }
+    .pandemic-information .pandemic-details .dash {
+      margin-left: 5px; }
+    .pandemic-information .pandemic-details .cases {
+      margin-top: 25px; }
+      .pandemic-information .pandemic-details .cases .confirmed {
+        display: flex;
+        flex-direction: column; }
+        .pandemic-information .pandemic-details .cases .confirmed .confirmed-title {
+          font-size: 2rem;
+          font-weight: 300;
+          font-size: 40px;
+          color: #555; }
+        .pandemic-information .pandemic-details .cases .confirmed .cofirmed-cases {
+          font-size: 54px;
+          font-weight: 700;
+          margin-top: 10px;
+          color: #aaa; }
+      .pandemic-information .pandemic-details .cases .recovered {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column; }
+        .pandemic-information .pandemic-details .cases .recovered .recovered-title {
+          font-size: 2rem;
+          font-weight: 300;
+          font-size: 40px;
+          color: #555; }
+        .pandemic-information .pandemic-details .cases .recovered .recovered-cases {
+          font-size: 54px;
+          font-weight: 700;
+          margin-top: 10px;
+          color: #8aca2b; }
+      .pandemic-information .pandemic-details .cases .critical {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column; }
+        .pandemic-information .pandemic-details .cases .critical .critical-title {
+          font-size: 2rem;
+          font-weight: 300;
+          font-size: 40px;
+          color: #555; }
+        .pandemic-information .pandemic-details .cases .critical .critical-cases {
+          font-size: 54px;
+          font-weight: 700;
+          margin-top: 10px;
+          color: #8b0000; }
+      .pandemic-information .pandemic-details .cases .deaths {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column; }
+        .pandemic-information .pandemic-details .cases .deaths .death-title {
+          font-size: 2rem;
+          font-weight: 300;
+          font-size: 40px;
+          color: #555; }
+        .pandemic-information .pandemic-details .cases .deaths .death-cases {
+          font-size: 54px;
+          font-weight: 700;
+          margin-top: 10px;
+          color: #696969; }
+  .pandemic-information .details-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px; }
+    .pandemic-information .details-box .case-status {
+      padding-bottom: 10px;
+      flex-grow: 1;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 3px; }
+      .pandemic-information .details-box .case-status .case-heading {
+        text-transform: uppercase;
+        background-color: #f5f5f5;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd; }
+      .pandemic-information .details-box .case-status .case-info {
+        padding: 15px;
+        text-align: center;
+        height: 200px; }
+        .pandemic-information .details-box .case-status .case-info .condition {
+          display: flex;
+          flex-direction: column;
+          height: 30%; }
+          .pandemic-information .details-box .case-status .case-info .condition .condition-number {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold; }
+          .pandemic-information .details-box .case-status .case-info .condition .status {
+            font-size: 13.5px; }
+      .pandemic-information .details-box .case-status .condition-stats {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 40%;
+        margin-top: 15px; }
+        .pandemic-information .details-box .case-status .condition-stats .number {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px; }
+        .pandemic-information .details-box .case-status .condition-stats .purple {
+          color: #8080ff; }
+        .pandemic-information .details-box .case-status .condition-stats .dark-red {
+          color: #8b0000; }
+        .pandemic-information .details-box .case-status .condition-stats .recover {
+          color: #8aca2b; }
+        .pandemic-information .details-box .case-status .condition-stats .stats {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px; }
+
+@media (max-width: 778px) {
+  .pandemic-information {
+    margin-left: 0;
+    justify-content: center;
+    width: auto; }
+  .details-box {
+    flex-direction: column;
+    align-items: center; }
+    .details-box .case-status {
+      width: 80%;
+      margin-bottom: 10px; } }
+
+.container {
+  width: 700px;
+  margin-left: 10%;
+  margin-top: 50px; }
+
+.summary .heading {
+  padding-top: 25px;
+  font-size: 20px; }
+
+.summary .description {
+  margin-top: 10px; }
+
+.summary a {
+  color: #337ab7;
+  text-decoration: none; }
+  .summary a:hover {
+    text-decoration: underline; }
+
+.favourite-countries {
+  margin-top: 25px;
+  padding-bottom: 25px; }
+  .favourite-countries .fav-list {
+    list-style: decimal; }
+    .favourite-countries .fav-list .single-country {
+      padding: 10px;
+      border-bottom: 1px solid #696969; }
+      .favourite-countries .fav-list .single-country:hover {
+        background-color: lightgray;
+        cursor: pointer; }
+      .favourite-countries .fav-list .single-country .favorite {
+        float: right; }
+
+.list-content {
+  margin-top: 50px; }
+  .list-content h1 {
+    padding-bottom: 25px; }
+  .list-content .list {
+    list-style: decimal; }
+    .list-content .list .single-country {
+      padding: 10px;
+      border-bottom: 1px solid #696969; }
+      .list-content .list .single-country:hover {
+        background-color: lightgray;
+        cursor: pointer; }
+      .list-content .list .single-country .favorite {
+        float: right; }
+
+@media (max-width: 778px) {
+  .container {
+    width: 80%;
+    margin: auto; } }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Modal Content */ }
+  .modal .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s; }
+    .modal .modal-content .close {
+      color: black;
+      float: right;
+      font-size: 28px;
+      font-weight: bold; }
+      .modal .modal-content .close:hover {
+        cursor: pointer; }
+
+.modal-body {
+  padding: 20px; }
+  .modal-body .country {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 300;
+    font-size: 40px;
+    color: #555; }
+  .modal-body .confirmed_c {
+    display: flex;
+    flex-direction: column; }
+    .modal-body .confirmed_c .confirmed-title_c {
+      font-size: 2rem;
+      font-weight: 300;
+      font-size: 40px;
+      color: #555; }
+    .modal-body .confirmed_c .cofirmed-cases_c {
+      font-size: 54px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #aaa; }
+  .modal-body .recovered_c {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; }
+    .modal-body .recovered_c .recovered-title_c {
+      font-size: 2rem;
+      font-weight: 300;
+      font-size: 40px;
+      color: #555; }
+    .modal-body .recovered_c .recovered-cases_c {
+      font-size: 54px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #8aca2b; }
+  .modal-body .critical_c {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; }
+    .modal-body .critical_c .critical-title_c {
+      font-size: 2rem;
+      font-weight: 300;
+      font-size: 40px;
+      color: #555; }
+    .modal-body .critical_c .critical-cases_c {
+      font-size: 54px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #8b0000; }
+  .modal-body .deaths_c {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; }
+    .modal-body .deaths_c .death-title_c {
+      font-size: 2rem;
+      font-weight: 300;
+      font-size: 40px;
+      color: #555; }
+    .modal-body .deaths_c .death-cases_c {
+      font-size: 54px;
+      font-weight: 700;
+      margin-top: 10px;
+      color: #696969; }
+  .modal-body .single-cases {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px; }
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+
+@media (max-width: 838px) {
+  .single-cases {
+    flex-direction: column;
+    text-align: center; } }

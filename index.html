@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Covid 19 worldwide</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="myModal" class="modal"></div>
+    <header class="header">
+      <div class="navigation">
+        <ul class="navigation-list">
+          <li>
+            <img src="img/logo.jpg" alt="logo" class="header-logo" />
+          </li>
+          <li>
+            <img
+              src="img/worldometers-logo.gif"
+              alt="worldometers-logo"
+              class="worldometers-logo"
+            />
+          </li>
+          <li><span class="coronavirus-text">Coronavirus</span></li>
+          <li><span class="population-text">Population</span></li>
+        </ul>
+      </div>
+    </header>
+    <div class="hr"></div>
+    <section>
+      <div class="pandemic-information">
+        <div class="head-title">
+          <span class="head-title-text">COVID-19 CORONAVIRUS PANDEMIC</span>
+        </div>
+        <div class="last-update">Last updated: <span class="date"></span></div>
+        <div class="pandemic-details">
+          <a
+            href="https://www.worldometers.info/coronavirus/worldwide-graphs/"
+            target="_blank"
+            >Graphs</a
+          ><span class="dash">-</span> <a href="">Countries</a
+          ><span class="dash">-</span>
+          <a href="">News</a>
+          <div class="cases">
+            <div class="confirmed">
+              <span class="confirmed-title">Coronavirus cases:</span>
+              <span class="cofirmed-cases"></span>
+            </div>
+            <div class="recovered">
+              <span class="recovered-title">Recovered:</span>
+              <span class="recovered-cases"></span>
+            </div>
+            <div class="critical">
+              <span class="critical-title">Critical:</span>
+              <span class="critical-cases"></span>
+            </div>
+            <div class="deaths">
+              <span class="death-title">Deaths:</span>
+              <span class="death-cases"></span>
+            </div>
+          </div>
+          <div class="details-box">
+            <div class="case-status">
+              <div class="case-heading">
+                <span>Active Cases</span>
+              </div>
+              <div class="case-info">
+                <div class="condition">
+                  <span
+                    class="condition-number"
+                    id="recover-in-progress"
+                  ></span>
+                  <span class="status">Recover in progress</span>
+                </div>
+                <div class="condition-stats">
+                  <div class="stats">
+                    <span class="number purple" id="mild-condition"></span>
+                    <span class="status">In mild condition</span>
+                  </div>
+                  <div class="stats">
+                    <span class="number dark-red" id="critical"></span>
+                    <span class="status">Critical</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#">Show Graph</a>
+            </div>
+
+            <div class="case-status">
+              <div class="case-heading">
+                <span>Closed Cases</span>
+              </div>
+              <div class="case-info">
+                <div class="condition">
+                  <span class="condition-number" id="closed"></span>
+                  <span class="status">Cases which had an outcome</span>
+                </div>
+                <div class="condition-stats">
+                  <div class="stats">
+                    <span class="number recover" id="recovered"></span>
+                    <span class="status">Recovered</span>
+                  </div>
+                  <div class="stats">
+                    <span class="number" id="deaths"></span>
+                    <span class="status">Deaths</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#">Show Graph</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <main>
+        <div class="container">
+          <div class="summary">
+            <span class="heading"
+              >Reported Cases and Deaths by Country or Territory</span
+            >
+            <p class="description">
+              The <strong>coronavirus</strong> COVID-19 is affecting
+              <strong
+                >219 countries and territories. The day is reset after midnight
+                GMT+4.</strong
+              >
+              The list of countries and their regional classification is based
+              on the
+              <a
+                href="https://unstats.un.org/unsd/methodology/m49/"
+                target="_blank"
+                >United Nations Geoscheme.</a
+              >
+              Sources are
+              <a href="#">provided under "Latest News."</a>
+              <a
+                href="https://www.worldometers.info/coronavirus/about/"
+                target="_blank"
+                ><strong
+                  >Learn more about Worldometer's COVID-19 data</strong
+                ></a
+              >
+            </p>
+          </div>
+          <div class="favourite-countries">
+            <h1>Favorite countries</h1>
+            <ol class="fav-list"></ol>
+          </div>
+          <div class="list-content">
+            <h1>All countries</h1>
+            <ol class="list"></ol>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

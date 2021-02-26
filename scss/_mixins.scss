@@ -1,0 +1,57 @@
+$title-color: #555;
+$light-green: #8aca2b;
+$dark-red: #8b0000;
+$dark-gray: #696969;
+$purple: #8080ff;
+$marginTop: 25px;
+
+@mixin roboto_font {
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+@mixin textStyles {
+  font-size: 2rem;
+  font-weight: 300;
+  font-size: 40px;
+  color: $title-color;
+}
+
+@mixin counterStyles {
+  font-size: 54px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin alignItems {
+  display: flex;
+  align-items: center;
+}
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin textCenter {
+  text-align: center;
+}
+
+@mixin listStyle {
+  .single-country {
+    padding: 10px;
+    border-bottom: 1px solid $dark-gray;
+    &:hover {
+      background-color: lightgray;
+      cursor: pointer;
+    }
+    .favorite {
+      float: right;
+    }
+  }
+}

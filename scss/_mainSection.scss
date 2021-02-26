@@ -1,0 +1,49 @@
+@import 'mixins';
+
+.container {
+  width: 700px;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.summary {
+  .heading {
+    padding-top: 25px;
+    font-size: 20px;
+  }
+  .description {
+    margin-top: 10px;
+  }
+  a {
+    color: #337ab7;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.favourite-countries {
+  margin-top: $marginTop;
+  padding-bottom: $marginTop;
+  .fav-list {
+    list-style: decimal;
+    @include listStyle;
+  }
+}
+.list-content {
+  margin-top: 50px;
+  h1 {
+    padding-bottom: $marginTop;
+  }
+  .list {
+    list-style: decimal;
+    @include listStyle;
+  }
+}
+
+@media (max-width: 778px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
