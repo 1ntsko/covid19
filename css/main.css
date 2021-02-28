@@ -234,7 +234,8 @@ ul {
   .list-content h1 {
     padding-bottom: 25px; }
   .list-content .list {
-    list-style: decimal; }
+    list-style: decimal;
+    margin-bottom: 30px; }
     .list-content .list .single-country {
       padding: 10px;
       border-bottom: 1px solid #696969; }
